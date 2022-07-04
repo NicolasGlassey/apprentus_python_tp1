@@ -23,7 +23,29 @@ class TestModel(unittest.TestCase):
         actual_result = self.tp1.triple(operand)
 
         # then
-        self.assertEqual(expected_result, actual_result);
+        self.assertEqual(expected_result, actual_result)
+
+    def test_is_peer_true_success(self):
+        # given
+        # refer to setup method
+        operand = 6
+
+        # when
+        # event will be called directly by the assertion
+
+        # then
+        self.assertTrue(self.tp1.is_peer(operand))
+
+    def test_is_peer_false_success(self):
+        # given
+        # refer to setup method
+        operand = 5
+
+        # when
+        # event will be called directly by the assertion
+
+        # then
+        self.assertFalse(self.tp1.is_peer(operand))
 
 if __name__ == '__main__':
     unittest.main()

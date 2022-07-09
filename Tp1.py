@@ -12,7 +12,7 @@ class Tp1:
     """
 
     def add(self, number1, number2):
-        return number1 + number2
+        raise Exception
 
     """
     This method is designed to gets the subtract a number to another one
@@ -22,7 +22,7 @@ class Tp1:
     """
 
     def subtract(self, number1, number2):
-        return number1 - number2
+        raise Exception
 
     """
     This method is designed to gets the average a 3 numbers
@@ -33,7 +33,7 @@ class Tp1:
     """
 
     def average(self, number1, number2, number3):
-        return (number1 + number2 + number3) / 3
+        raise Exception
 
     """
     This method is designed to gets the triple of a number
@@ -44,7 +44,7 @@ class Tp1:
     # endregion Bonus
 
     def triple(self, number):
-        return number * 3
+        raise Exception
 
     """
     This method is designed to test if a number is peer
@@ -53,10 +53,7 @@ class Tp1:
     """
 
     def is_peer(self, number):
-        if number % 2 == 0:
-            return True
-        else:
-            return False
+        raise Exception
 
     """
     This method is designed to realize multiplications
@@ -66,7 +63,7 @@ class Tp1:
     """
 
     def multiply(self, multiplier, multiplicand):
-        return multiplier * multiplicand
+        raise Exception
 
     """
     This method is designed to generate a list of peer number
@@ -76,11 +73,7 @@ class Tp1:
     """
 
     def unpair_range(self, range_upper_limit):
-        list_of_peers = []
-        for number in range(range_upper_limit):
-            if not self.is_peer(number):
-                list_of_peers.append(number)
-        return list_of_peers
+        raise Exception
 
     """
     This method is designed to generate a list of pair, triplied
@@ -90,10 +83,7 @@ class Tp1:
     """
 
     def triple_range(self, range_upper_limit):
-        list_of_triples = []
-        for number in range(1, range_upper_limit + 1):
-            list_of_triples.append(self.triple(number))
-        return list_of_triples
+        raise Exception
 
     """
     This method is designed to get the factorial of a number
@@ -102,7 +92,7 @@ class Tp1:
     """
 
     def factorial(self, number):
-        return math.factorial(number)
+        raise Exception
 
     """
     This method is designed to convert a list of number in a list of number and boolean (true, false if peer)
@@ -112,13 +102,7 @@ class Tp1:
     """
 
     def integer_to_boolean(self, numbers):
-        list_numbers_to_boolean = []
-        for number in numbers:
-            if self.is_peer(number):
-                list_numbers_to_boolean.append((number, True))
-            else:
-                list_numbers_to_boolean.append((number, False))
-        return list_numbers_to_boolean
+        raise Exception
 
     """
     This method is designed to get the population's average by city
@@ -128,11 +112,7 @@ class Tp1:
     """
 
     def population_average_by_city(self, cities):
-        population_total = 0
-        for city in cities:
-            population_total += city[1]
-        amount_city = len(cities)
-        return population_total / amount_city
+        raise Exception
 
     """
     This method is designed to find a first bigger value from a minimal in a given list
@@ -143,9 +123,4 @@ class Tp1:
     """
 
     def find_value_bigger_than_minimal(self, numbers, min_value):
-
-        numbers.sort()
-        for number in numbers:
-            if number > min_value:
-                return number
-        return None
+        raise Exception

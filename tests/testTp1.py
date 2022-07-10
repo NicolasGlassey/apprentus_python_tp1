@@ -1,14 +1,10 @@
 import unittest
 
-import null
-
 from Tp1 import Tp1
 
 
 class TestModel(unittest.TestCase):
     # class attributes
-    tp1 = null
-
     def setUp(self):
         self.tp1 = Tp1()
 
@@ -199,3 +195,7 @@ class TestModel(unittest.TestCase):
 
         # then
         self.assertEqual(expected_result, actual_result)
+
+
+if __name__ == '__main__':
+    unittest.main()

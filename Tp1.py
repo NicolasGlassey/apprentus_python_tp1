@@ -12,7 +12,7 @@ class Tp1:
     """
 
     def add(self, number1, number2):
-        raise Exception
+        return number1 + number2
 
     """
     This method is designed to gets the subtract a number to another one
@@ -22,7 +22,7 @@ class Tp1:
     """
 
     def subtract(self, number1, number2):
-        raise Exception
+        return number1 - number2
 
     """
     This method is designed to gets the average a 3 numbers
@@ -33,7 +33,7 @@ class Tp1:
     """
 
     def average(self, number1, number2, number3):
-        raise Exception
+        return sum(number1, number2, number3) / 3
 
     """
     This method is designed to gets the triple of a number
@@ -44,7 +44,7 @@ class Tp1:
     # endregion Bonus
 
     def triple(self, number):
-        raise Exception
+        return number * 3
 
     """
     This method is designed to test if a number is peer
@@ -53,7 +53,10 @@ class Tp1:
     """
 
     def is_peer(self, number):
-        raise Exception
+        if number % 2 == 0:
+            return True
+        else:
+            return False
 
     """
     This method is designed to realize multiplications
@@ -63,7 +66,7 @@ class Tp1:
     """
 
     def multiply(self, multiplier, multiplicand):
-        raise Exception
+        return multiplier * multiplicand
 
     """
     This method is designed to generate a list of peer number
@@ -73,8 +76,11 @@ class Tp1:
     """
 
     def unpair_range(self, range_upper_limit):
-        raise Exception
-
+        list_of_numbers = []
+        for current_number in range(1, range_upper_limit):
+            if not self.is_peer(current_number):
+                list_of_numbers.append(current_number)
+        return list_of_numbers
     """
     This method is designed to generate a list of pair, triplied
     @:param range_upper_limit :

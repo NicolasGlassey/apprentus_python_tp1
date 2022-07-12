@@ -91,6 +91,7 @@ class Tp1:
     def triple_range(self, range_upper_limit):
         list_of_triple_range = []
         for number in range(1, range_upper_limit):
+            # TODO - Bug fix
             self.multiply(number, 3)
             list_of_triple_range.append(number)
         return list_of_triple_range
@@ -130,10 +131,11 @@ class Tp1:
     """
 
     def population_average_by_city(self, cities):
-        List_of_Populations = []
+        # TODO - Camel case... 
+        list_of_Populations = []
         for single_tuple in cities:
-            List_of_Populations.append(single_tuple[1])
-        return sum(List_of_Populations)/len(List_of_Populations)
+            list_of_Populations.append(single_tuple[1])
+        return sum(list_of_Populations)/len(list_of_Populations)
 
     """
     This method is designed to find a first bigger value from a minimal in a given list

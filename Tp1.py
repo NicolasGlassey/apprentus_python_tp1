@@ -131,7 +131,7 @@ class Tp1:
     """
 
     def population_average_by_city(self, cities):
-        # TODO - Camel case... 
+        # TODO - do not use Uppercase variable's name
         list_of_Populations = []
         for single_tuple in cities:
             list_of_Populations.append(single_tuple[1])

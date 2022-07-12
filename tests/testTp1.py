@@ -41,13 +41,11 @@ class TestModel(unittest.TestCase):
     def test_average_nominal_case_success(self):
         # given
         # refer to setup method
-        number1 = 5
-        number2 = 10
-        number3 = 15
+        numbers = list((5, 10, 15))
         expected_result = 10
 
         # when
-        actual_result = self.tp1.average(number1, number2, number3)
+        actual_result = self.tp1.average(numbers)
 
         # then
         self.assertEqual(expected_result, actual_result)

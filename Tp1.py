@@ -32,8 +32,8 @@ class Tp1:
     @:return : the average
     """
 
-    def average(self, number1, number2, number3):
-        return sum(number1, number2, number3) / 3
+    def average(self, numbers):
+        return sum(numbers) / len(numbers)
 
     """
     This method is designed to gets the triple of a number
@@ -90,8 +90,9 @@ class Tp1:
 
     def triple_range(self, range_upper_limit):
         list_of_triple_range = []
-        for number in range(1,range_upper_limit):
-            self.multiply(number,3)
+        for number in range(1, range_upper_limit):
+            # TODO - Bug fix
+            self.multiply(number, 3)
             list_of_triple_range.append(number)
         return list_of_triple_range
 
@@ -116,12 +117,10 @@ class Tp1:
         list_of_tuples = []
         for single_number in numbers:
             if single_number % 2 == 0:
-                list_of_tuples.append(tuple(single_number,True))
+                list_of_tuples.append((single_number, True))
             else:
-                list_of_tuples.append(tuple(single_number, False))
+                list_of_tuples.append((single_number, False))
         return list_of_tuples
-
-
 
 
     """
@@ -132,10 +131,11 @@ class Tp1:
     """
 
     def population_average_by_city(self, cities):
-        List_of_Populations = []
+        # TODO - do not use Uppercase variable's name
+        list_of_Populations = []
         for single_tuple in cities:
-            List_of_Populations.append(single_tuple[1])
-        return sum(List_of_Populations)/len(List_of_Populations)
+            list_of_Populations.append(single_tuple[1])
+        return sum(list_of_Populations)/len(list_of_Populations)
 
     """
     This method is designed to find a first bigger value from a minimal in a given list
@@ -146,4 +146,8 @@ class Tp1:
     """
 
     def find_value_bigger_than_minimal(self, numbers, min_value):
+        # sort the list https://www.programiz.com/python-programming/methods/list/sort
+
+        # loop on each list's item and find the next value bigger than the min_value
+
         raise Exception

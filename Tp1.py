@@ -89,7 +89,11 @@ class Tp1:
     """
 
     def triple_range(self, range_upper_limit):
-        raise Exception
+        list_of_triple_range = []
+        for number in range(1,range_upper_limit):
+            self.multiply(number,3)
+            list_of_triple_range.append(number)
+        return list_of_triple_range
 
     """
     This method is designed to get the factorial of a number
@@ -98,7 +102,8 @@ class Tp1:
     """
 
     def factorial(self, number):
-        raise Exception
+        return math.factorial(number)
+
 
     """
     This method is designed to convert a list of number in a list of number and boolean (true, false if peer)
@@ -108,7 +113,16 @@ class Tp1:
     """
 
     def integer_to_boolean(self, numbers):
-        raise Exception
+        list_of_tuples = []
+        for single_number in numbers:
+            if single_number % 2 == 0:
+                list_of_tuples.append(tuple(single_number,True))
+            else:
+                list_of_tuples.append(tuple(single_number, False))
+        return list_of_tuples
+
+
+
 
     """
     This method is designed to get the population's average by city
@@ -118,7 +132,10 @@ class Tp1:
     """
 
     def population_average_by_city(self, cities):
-        raise Exception
+        List_of_Populations = []
+        for single_tuple in cities:
+            List_of_Populations.append(single_tuple[1])
+        return sum(List_of_Populations)/len(List_of_Populations)
 
     """
     This method is designed to find a first bigger value from a minimal in a given list
